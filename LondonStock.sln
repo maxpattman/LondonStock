@@ -29,6 +29,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A4A345FF-61FC-48C9-8DB9-E996F0D6AB40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{0255D658-3F1A-406A-B47C-2D3C6371C3B9}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.LondonStock.Application", "Test.LondonStock.Application\Test.LondonStock.Application.csproj", "{9A63A480-21F6-48B3-8158-4B36BA4D3573}"
 EndProject
