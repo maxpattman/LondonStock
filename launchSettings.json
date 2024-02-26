@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "londonstock.api",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
+      "serviceActions": {
+        "londonstock.api": "StartDebugging",
+        "londonstock.cache": "StartWithoutDebugging",
+        "londonstock.database": "StartWithoutDebugging"
+      }
+    }
+  }
+}

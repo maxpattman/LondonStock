@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+
+    londonstock.api:
+        image: ${DOCKER_REGISTRY-}londonstockapi
+        container_name: londonstock.api
+        build:
+            context: .
+            dockerfile: Api/Dockerfile
+        ports:
+            - "80:80"
+            - "443:443"
+
+    londonstock.database:
+        image: postgres:latest
+        container_name: londonstock.database
+        environment:
+            - POSTGRES_DB=stocksdb
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres 
+        volumes:
+            - ./.containers/stocks-db:/var/lib/postgresql/data
+        ports:
+            - "5432:5432" 
+ 
+    londonstock.cache:
+        image: redis:latest
+        restart: always
+        ports:
+            - '6379:6379'
+    
+     

@@ -1,0 +1,16 @@
+Given Request for current value of stock TickerSymbol (*) GET current value of stock 
+
+Given Request for all stocks * GET current values of all stocks on the market {ticker symbol , value}
+
+Given Request for list of stocks with supplied list (*) GET current values of requested stocks 
+
+
+Values for a range of them as a list of ticker symbols
+
+
+given 
+
+
+Post
+
+Given Broker Sends notification of a Transaction 
