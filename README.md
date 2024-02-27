@@ -1,6 +1,6 @@
 # LondonStock 
 
-* Project Structure is mostly there most Functional Requirements working . Project is Currently Incomplete
+* Project structure is complete most functional Requirements working . Project is in currently incomplete state
 
 
 # Api 
@@ -18,11 +18,11 @@ handles the user interactions and fetches data to the user interface.
     * Configuration of the application
 
 * Dockerfile
-    * For Containerising the Application
+    * For containerising the application
       
 * Entry point for dependencey injection and third party services
 
-* Nswag Client automatic Generation for generating api clients 
+* Nswag client automatic generation for generating api clients 
 
 #### API Calls
 
@@ -62,16 +62,16 @@ handles the user interactions and fetches data to the user interface.
 ## Contents:
 
 * #### Contracts 
-    * Interfaces define Application behaviors 
+    * Interfaces define application behaviors 
 * #### DTOs
     * Encapsulate data for transfer
 * #### Exceptions
-    * Define Custom Exceptions 
+    * Define custom exceptions 
 * #### Features 
     * Commands
-        * Represents CREATE , UPDATE , DELETE Requests and Handlers 
+        * Represents CREATE , UPDATE , DELETE requests and handlers 
     * Queries 
-        * Represents Read operations Requests and Handlers 
+        * Represents READ requests and handlers 
 
 * #### Profiles
 
@@ -81,24 +81,25 @@ handles the user interactions and fetches data to the user interface.
 
 #### Description
 
-* Contains the Core Domain Logic, Entities
+* Contains the core domain logic, entities
 
 # Persistance/Infrastructure
 
 #### Description
 
-*  Layer that interacts with external resources and has dependency on the application layer    (databases)
+*  Layer that interacts with external resources 
 
 # Application Deployment 
 
  ## Docker
 
- a Dockerfile defined in Api is used to build the application and deploy it as a container 
+ a Dockerfile defined in Api is used to build the application and deploy it as a container
+ 
 (minimal configuration)
 
  ## Docker Compose
 
- Docker compose is used to deploy the LondonStock Api Container , Postgresql and Redis Cache 
+ Docker compose is used to deploy the LondonStock Api container , Postgresql and Redis Cache 
 
  (minimal configuration)
 
@@ -129,24 +130,29 @@ handles the user interactions and fetches data to the user interface.
     Distribute incoming requests across multiple server instances using a load balancer.
 
 *  ### Database
-    Use Connection pools
+    Use connection pools
 
     Backup and Restore (Auditing)
 
 *  ### Observability 
 
-    Deploying an Observability and Monitoring Solution alongside the application 
+    Deploying an observability and monitoring solution alongside the application 
 
 * ### Performance Testing and Simulations 
-    If Resource limited Performance test and Simulate edge case scenarios . How much Traffic at this resource level can it handle ? 
+    If Resource limited performance test and simulate edge case scenarios . How much traffic at this resource level can it handle ? 
 
-    Develop Throttling and Rate Limiting policies around this.
+    Develop throttling and rate limiting policies around this.
 
  # Can you Identify any bottlenecks ?
 
  The main bottle neck at the application level is the Mediatr.
  It is a single point of faliure and is not suitable to high traffic APIs 
- For the High Traffic and Scalability i would look to Somthing like Apache Kafka 
+ For the high traffic and scalability i would look to somthing like Apache Kafka.
+ 
+ Please note that at this point no security best practices have been used
+
+ - Pass connection strings and passwords either as Env variables or secrets 
+ - Authentication system for Brokers is needed 
 
 
 
