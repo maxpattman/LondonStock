@@ -34,7 +34,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Application\LondonStock.Application.csproj" />
     <ProjectReference Include="..\Domain\LondonStock.Domain.csproj" />
-    <ProjectReference Include="..\LondonStock.Persistance\LondonStock.Persistance.csproj" />
+    <ProjectReference Include="..\Persistance\LondonStock.Persistance.csproj" />
   </ItemGroup>
 	
     <ItemGroup>

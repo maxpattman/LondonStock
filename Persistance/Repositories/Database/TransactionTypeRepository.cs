@@ -23,6 +23,7 @@ namespace LondonStock.Persistance.Repositories
         public async Task<TransactionType> Add(TransactionType entity)
         {
             await _dbContext.AddAsync(entity);
+            
             await _dbContext.SaveChangesAsync();
             return entity;
         }

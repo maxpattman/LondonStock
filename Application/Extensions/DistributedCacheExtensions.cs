@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Caching.Distributed;
+﻿using LondonStock.Application.Extensions;
+using Microsoft.Extensions.Caching.Distributed;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,4 +42,70 @@ namespace LondonStock.Application.Extensions
         }
     }
     
+}
+
+public interface IDistributedCacheExtentionsMethodsWrapper : IDistributedCache
+{
+
+    Task SetRecordAsync<T>(IDistributedCache cache,string recordId,T data,TimeSpan? absoluteExpireTime = null,TimeSpan? unusedExpireTime = null);
+
+    Task<T> GetRecordAsync<T>(IDistributedCache cache, string recordId, CancellationToken cancellationToken);
+
+    public IDistributedCache _cache { get; set; }
+}
+
+public class DistributedCacheExtentionsMethodsWrapper : IDistributedCacheExtentionsMethodsWrapper 
+{
+    public IDistributedCache _cache { get ; set ; }
+
+    public byte[] Get(string key)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<byte[]> GetAsync(string key, CancellationToken token = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<T> GetRecordAsync<T>(IDistributedCache cache, string recordId, CancellationToken cancellationToken)
+    {
+        return DistributedCacheExtentions.GetRecordAsync<T>(cache, recordId, cancellationToken);
+    }
+
+    public void Refresh(string key)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task RefreshAsync(string key, CancellationToken token = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Remove(string key)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task RemoveAsync(string key, CancellationToken token = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Set(string key, byte[] value, DistributedCacheEntryOptions options)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task SetAsync(string key, byte[] value, DistributedCacheEntryOptions options, CancellationToken token = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task SetRecordAsync<T>(IDistributedCache cache, string recordId, T data, TimeSpan? absoluteExpireTime = null, TimeSpan? unusedExpireTime = null) 
+    {
+        return DistributedCacheExtentions.SetRecordAsync<T>(cache, recordId, data, absoluteExpireTime, unusedExpireTime);
+    }
+
 }

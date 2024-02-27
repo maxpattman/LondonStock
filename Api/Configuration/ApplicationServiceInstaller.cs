@@ -6,6 +6,7 @@ using LondonStock.Application.Features.StockType.Queries.GetAllStockType;
 using LondonStock.Application.Features.StockType.Queries.GetStockList;
 using LondonStock.Application.Features.StockType.Queries.GetStockType;
 using MediatR;
+using LondonStock.Application.Profiles;
 using MediatR.Registration;
 using System.Net.NetworkInformation;
 using System.Reflection;

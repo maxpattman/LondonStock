@@ -103,7 +103,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../LondonStock.Client/Client.cs",
+      "output": "../Client/LondonStock.Client/Client.cs",
       "newLineBehavior": "Auto"
     }
   }

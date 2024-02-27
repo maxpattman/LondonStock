@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Test.Specification.LondonStock.Api.Features.Formal
+namespace Test.Specification.Api.Features.Formal
 {
     using TechTalk.SpecFlow;
     using System;
@@ -31,7 +31,7 @@ namespace Test.Specification.LondonStock.Api.Features.Formal
 #line 1 ".feature"
 #line hidden
         
-        public Feature(Feature.FixtureData fixtureData, Test_Specification_LondonStock_Api_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public Feature(Feature.FixtureData fixtureData, Test_Specification_Api_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();

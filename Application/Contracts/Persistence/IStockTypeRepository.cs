@@ -10,5 +10,6 @@ namespace LondonStock.Application.Contracts.Persistence
     public interface IStockTypeRepository : IGenericRepository<StockType>
     {
         Task<StockType> Get(string ticker);
+        
     }
 }

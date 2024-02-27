@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Profiles
+namespace LondonStock.Application.Profiles
 {
     public class StockTypeProfile : Profile
     {
